@@ -25,7 +25,7 @@ pkgver() {
 
 package() { 
 	mkdir -pm755 $pkgdir/etc/udev/rules.d
-        mv 50-uinput.rules $pkgdir/etc/udev/rules.d/50-uinput.rules
+        cp 50-uinput.rules $pkgdir/etc/udev/rules.d/50-uinput.rules
 	cd "$srcdir/$pkgname"
 	mkdir -pm755 $pkgdir/usr/share/licenses/$pkgname
 	cp LICENSE $pkgdir/usr/share/licenses/$pkgname/

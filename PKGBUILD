@@ -9,9 +9,10 @@ url="https://github.com/chrippa/ds4drv"
 license=('MIT')
 depends=('python-setuptools' 'bluez-utils')
 makedepends=('perl' 'git')
+install=ds4drv.install
 source=("${pkgname%-*}::git+https://github.com/chrippa/ds4drv.git" 'ds4drv.tar.gz')
 sha256sums=('SKIP'
-            '7a8a980321054b4bc233f9871356e3d49824447b6890d6cdf0f345ae9acfc9bc')
+            '9cf74eed8948677337ae723154e126d8c42619db9925c7dfd478671455bd5ec0')
 
 pkgver() {
   cd "${srcdir}"/${pkgname%-*}

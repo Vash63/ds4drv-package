@@ -22,6 +22,8 @@ pkgver() {
 
 package() { 
 	cd "$srcdir/$pkgname"
+	mkdir -pm755 $pkgdir/usr/share/licenses/$pkgname
+	cp LICENSE $pkgdir/usr/share/licenses/$pkgname/
 	python setup.py install --root="$pkgdir/" --optimize=1
 	mkdir -pm755 $pkgdir/etc/udev/rules.d
 	mv $srcdir/scripts/50-uinput.rules $pkgdir/etc/udev/rules.d/50-uinput.rules

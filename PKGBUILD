@@ -10,7 +10,8 @@ license=('MIT')
 depends=('python-setuptools' 'bluez-utils')
 makedepends=('perl' 'git')
 source=("${pkgname%-*}::git+https://github.com/chrippa/ds4drv.git" 'ds4drv.tar.gz')
-sha256sums=('SKIP' '20ad5b0b53976debe730f631730add55534a73cbec82d8d7aeba53affaa96cf3')
+sha256sums=('SKIP'
+            '7a8a980321054b4bc233f9871356e3d49824447b6890d6cdf0f345ae9acfc9bc')
 
 pkgver() {
   cd "${srcdir}"/${pkgname%-*}
@@ -22,7 +23,7 @@ package() {
 	cd "$srcdir/$pkgname"
 	python setup.py install --root="$pkgdir/" --optimize=1
 	mkdir -pm755 $pkgdir/etc/udev/rules.d
-	mv $srcdir/$pkgname/50-uinput.rules $pkgdir/etc/udev/rules.d/50-uinput.rules
+	mv $srcdir/scripts/50-uinput.rules $pkgdir/etc/udev/rules.d/50-uinput.rules
 }
 
 # vim: ft=sh syn=sh

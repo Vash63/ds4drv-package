@@ -1,6 +1,6 @@
-# Maintainer: George Gibbs <vash63@gmail.com>
+# Maintainer: George Gibbs <vash63 at gmail dot com>
 
-pkgname=ds4drv
+pkgname=ds4drv-git
 pkgver=40
 pkgrel=1
 pkgdesc="Sony Dual Shock 4 Bluetooth Driver"
@@ -10,7 +10,7 @@ license=('MIT')
 depends=('python-setuptools' 'bluez-utils')
 makedepends=('perl' 'git')
 install=ds4drv.install
-source=("${pkgname%-*}::git+https://github.com/chrippa/ds4drv.git" 50-uinput.rules)
+source=("${pkgname%}::git+https://github.com/chrippa/ds4drv.git" 50-uinput.rules)
 sha256sums=('SKIP'
             'b67455c70a2559fbb6872949974c79503f9005ec44fd99ea2ca1f8ae47fe4d09')
 

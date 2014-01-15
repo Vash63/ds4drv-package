@@ -3,11 +3,11 @@
 pkgname=ds4drv-git
 pkgver=40
 pkgrel=1
-pkgdesc="Sony Dual Shock 4 Bluetooth Driver"
+pkgdesc="Sony DualShock 4 Bluetooth Driver"
 arch=('any')
 url="https://github.com/chrippa/ds4drv"
 license=('MIT')
-depends=('python-setuptools' 'bluez-utils')
+depends=('python-setuptools' 'bluez-utils' 'python-evdev')
 makedepends=('perl' 'git')
 install=ds4drv.install
 source=("${pkgname%}::git+https://github.com/chrippa/ds4drv.git" 50-uinput.rules)

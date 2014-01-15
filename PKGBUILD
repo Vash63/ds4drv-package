@@ -2,7 +2,7 @@
 
 pkgname=ds4drv-git
 pkgver=40
-pkgrel=1
+pkgrel=2
 pkgdesc="Sony DualShock 4 Bluetooth Driver"
 arch=('any')
 url="https://github.com/chrippa/ds4drv"
@@ -18,10 +18,6 @@ pkgver() {
 	cd "${srcdir}"/${pkgname%-*}
 	git rev-list --count HEAD
 }
-
-#prepare() {
-#	mv 50-uinput.rules $srcdir/
-#}
 
 package() { 
 	mkdir -pm755 $pkgdir/etc/udev/rules.d

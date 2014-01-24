@@ -12,8 +12,8 @@ makedepends=('git')
 provides=('ds4drv')
 conflicts=('ds4drv-git')
 install=ds4drv.install
-source=(https://github.com/chrippa/ds4drv/archive/v0.1.1.tar.gz 50-uinput.rules)
-sha256sums=('c85ebf6376400c7335b851fc20cce1d0faf97695d542ee4aeb00a72e4addb240'
+source=(https://github.com/chrippa/ds4drv/archive/v$pkgver.tar.gz 50-uinput.rules)
+sha256sums=('818d493be65c125d002455a0e3bc71d2d59f6411e05c6ab68d8b9072addb2e21'
             'b67455c70a2559fbb6872949974c79503f9005ec44fd99ea2ca1f8ae47fe4d09')
 
 package() { 

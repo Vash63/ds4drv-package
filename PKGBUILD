@@ -9,11 +9,10 @@ url="https://github.com/chrippa/ds4drv"
 license=('MIT')
 depends=('python-setuptools' 'bluez-utils' 'python-evdev' 'python-pyudev')
 makedepends=('git')
-provides=('ds4drv')
 conflicts=('ds4drv-git')
 install=ds4drv.install
-source=(https://github.com/chrippa/ds4drv/archive/v$pkgver.tar.gz 50-uinput.rules)
-sha256sums=('818d493be65c125d002455a0e3bc71d2d59f6411e05c6ab68d8b9072addb2e21'
+source=(https://github.com/chrippa/ds4drv/archive/v0.2.1.tar.gz 50-uinput.rules)
+sha256sums=('1df6afdbfac38ef6794073a18425e32183c9a33e0a9d2447216827d0f3fc9693'
             'b67455c70a2559fbb6872949974c79503f9005ec44fd99ea2ca1f8ae47fe4d09')
 
 package() { 

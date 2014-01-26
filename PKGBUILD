@@ -29,7 +29,9 @@ package() {
 	cp LICENSE $pkgdir/usr/share/licenses/$pkgname/
 	python setup.py install --root="$pkgdir/" --optimize=1
 	mkdir -pm755 $pkgdir/etc/systemd/system
-	cp $srcdir/$pkgname/ds4drv.service $pkgdir/etc/systemd/system/ds4drv.service
+	cp $srcdir/$pkgname/systemd/ds4drv.service $pkgdir/etc/systemd/system/ds4drv.service
+	mkdir -pm755 $pkgdir/etc/conf.d
+	cp $srcdir/$pkgname/systemd/ds4drv.conf $pkgdir/etc/conf.d/ds4drv.conf
 }
 
 # vim: ft=sh syn=sh

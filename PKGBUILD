@@ -1,7 +1,7 @@
 # Maintainer: George Gibbs <vash63 at gmail dot com>
 
 pkgname=ds4drv-git
-pkgver=74
+pkgver=82
 pkgrel=1
 pkgdesc="Sony DualShock 4 Bluetooth Driver"
 arch=('any')

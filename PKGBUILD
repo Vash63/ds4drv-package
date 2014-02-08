@@ -23,13 +23,13 @@ pkgver() {
 package() { 
 	cd "$srcdir/$pkgname"
 	mkdir -pm755 $pkgdir/etc/udev/rules.d
-        cp $srcdir/$pkgname/udev/50-ds4drv.rules $pkgdir/etc/udev/rules.d/50-ds4drv.rules
+        cp udev/50-ds4drv.rules $pkgdir/etc/udev/rules.d/50-ds4drv.rules
 	mkdir -pm755 $pkgdir/usr/share/licenses/$pkgname
 	cp LICENSE $pkgdir/usr/share/licenses/$pkgname/
 	python setup.py install --root="$pkgdir/" --optimize=1
 	mkdir -pm755 $pkgdir/etc/systemd/system
-	cp $srcdir/$pkgname/systemd/ds4drv.service $pkgdir/etc/systemd/system/ds4drv.service
-	cp $srcdir/$pkgname/ds4drv.conf $pkgdir/etc/ds4drv.conf
+	cp systemd/ds4drv.service $pkgdir/etc/systemd/system/ds4drv.service
+	cp ds4drv.conf $pkgdir/etc/ds4drv.conf
 }
 
 # vim: ft=sh syn=sh
